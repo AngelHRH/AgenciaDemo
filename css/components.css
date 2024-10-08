@@ -1,4 +1,5 @@
 .container-carrusel {
+    margin-top: 9%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,7 +7,7 @@
 
 .carrusel {
     position: relative;
-    max-width: 80%;
+    max-width: 100%;
     overflow: hidden;
 }
 
@@ -73,45 +74,109 @@
 
 .banner-item {
     background-color: var(--secondary-color);
-    width: 300px;
-    border-radius: 20px;
-    padding: 15px;
+    height: 10%;
+    width: 600px;
+    border-radius: 15px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.banner-item img {
-    width: 100%;
-    height: auto;
+.banner-item img { 
+    width: 600px;
+    border-radius: 20px 20px 0 0;
 }
 
-#most-sold,
-#recent-trips {
-    display: flex;
-    flex-wrap: wrap;
+.banner-item:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#most-sold {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     list-style-type: none;
     padding: 0;
 }
 
-#most-sold li,
-#recent-trips li {
-    width: 200px;
-    border: 1px solid var(--text-color);
-    padding: 15px;
-    text-align: center;
+.trip-item {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
 }
 
-#most-sold li img,
-#recent-trips li img {
+.trip-item img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.trip-item:hover img {
+    transform: scale(1.1);
+}
+
+.trip-item h3 {
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+.trip-item p {
+    margin: 0 10px 10px;
+    color: var(--text-color);
+}
+
+.price {
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+#recent-trips {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
 }
 
 #magazine {
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 #magazine img {
-    width: 200px;
+    width: 100%;
     height: auto;
+    object-fit: cover;
 }
+
+.button-container {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+    color: var(--text-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn-center {
+    text-decoration: none;
+    text-align: center;
+}
+
+.button-container:hover {
+    background-color: var(--hover-color);
+    color: var(--hover-text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+

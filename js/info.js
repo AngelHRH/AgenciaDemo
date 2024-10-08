@@ -72,7 +72,6 @@ function loadFooter() {
     document.getElementById('footer').innerHTML = html;
 }
 
-
 function loadWhatsapp() {
     let html = `
         <a href="https://api.whatsapp.com/send/?phone=52${contact.whatsapp}" class="float" target="_blank">
@@ -126,7 +125,6 @@ function loadMenu() {
         html += '</div>';
         document.getElementById('mas-destinos').innerHTML = html;
     }
-
 }
 
 const mobileMenu = document.getElementById('mobile-menu');

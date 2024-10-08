@@ -20,7 +20,9 @@ fetch('https://www.api.salonnefertaritravel.com/api/getHome', {
                 <img src="${banner.imagen}" alt="${banner.titulo}">
                 <h3>${banner.titulo}</h3>
                 <p>${banner.desc}</p>
-                <a href="/viaje/${banner.viaje}">Ver más detalles</a>
+                <div class="button-container"> <!-- Contenedor para centrar el botón -->
+                    <a href="/viaje/${banner.viaje}" class="btn-center">Ver más</a>
+                </div>
             `;
             bannerContainer.appendChild(bannerDiv);
         });
@@ -55,7 +57,9 @@ fetch('https://www.api.salonnefertaritravel.com/api/getHome', {
             li.innerHTML = `
                 <img src="${trip.imagen}" alt="${trip.nombre}">
                 <strong>${trip.nombre}</strong>
-                <a href="/viaje/${trip.viaje}">Ver más detalles</a>
+                <div class="button-container"> <!-- Contenedor para centrar el botón -->
+                    <a href="/viaje/${trip.viaje}" class="btn-center">Ver más detalles</a>
+                </div>
             `;
             mostSold.appendChild(li);
         });
@@ -67,7 +71,9 @@ fetch('https://www.api.salonnefertaritravel.com/api/getHome', {
             const li = document.createElement('li');
             li.innerHTML = `
                 <strong>${trip.nombre}</strong>
-                <a href="/viaje/${trip.viaje}">Ver más detalles</a>
+                <div class="button-container"> <!-- Contenedor para centrar el botón -->
+                    <a href="/viaje/${trip.viaje}" class="btn-center">Ver más detalles</a>
+                </div>
             `;
             recentTrips.appendChild(li);
         });
