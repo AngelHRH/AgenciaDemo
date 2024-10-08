@@ -53,24 +53,45 @@ function loadData(data) {
 function loadFooter() {
     let html = `
         <div class="footer-container">
-            <a href="/" class="footer-brand">
-                <h1 class="footer-title"><span class="text-primary">Agencia</span> Demo</h1>
-            </a>
-            <div class="footer-contact">
-                <p><i class="fa fa-map-marker-alt mr-2"></i>${contact.direccion}, ${contact.ciudad}, ${contact.estado}, C.P. ${contact.cp}.</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>${contact.telefono}</p>
-                <p><i class="fa fa-envelope mr-2"></i>${contact.correo}</p>
+            <div class="footer-info">
+                <a href="/" class="footer-brand">
+                    <h1 class="footer-title"><span class="text-primary">Agencia</span> Demo</h1>
+                </a>
+                <div class="footer-contact">
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>${contact.direccion}, ${contact.ciudad}, ${contact.estado}, C.P. ${contact.cp}.</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>${contact.telefono}</p>
+                    <p><i class="fa fa-envelope mr-2"></i>${contact.correo}</p>
+                </div>
+                <div class="footer-social">
+                    <a class="social" href="https://twitter.com/nefertaritravel" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="social" href="https://www.facebook.com/NefertariTravel/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social" href="https://www.instagram.com/nefertari_travel/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="social" href="https://api.whatsapp.com/send/?phone=52${contact.whatsapp}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
-            <div class="footer-social">
-                <a class="social" href="https://twitter.com/nefertaritravel" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a class="social" href="https://www.facebook.com/NefertariTravel/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a class="social" href="https://www.instagram.com/nefertari_travel/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a class="social" href="https://api.whatsapp.com/send/?phone=52${contact.whatsapp}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <div class="contact-form-container">
+                <h2>Contacto</h2>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Nombre" required />
+                    <input type="email" name="email" placeholder="Correo Electrónico" required />
+                    <textarea name="message" placeholder="Mensaje" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
             </div>
         </div>
     `;
     document.getElementById('footer').innerHTML = html;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Formulario enviado con éxito');
+        contactForm.reset();
+    });
+});
+
 
 function loadWhatsapp() {
     let html = `

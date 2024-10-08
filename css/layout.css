@@ -5,7 +5,7 @@
     padding: 0 20px;
     background-color: var(--secondary-color);
     height: 18%;
-    position: fixed; /* Fija la barra en la parte superior */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -149,12 +149,16 @@ nav ul li:hover .dropdown-menu {
 
 .footer-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     background-color: var(--secondary-color);
     color: var(--text-color);
     padding: 40px 20px;
     text-align: center;
+}
+
+.footer-info {
+    flex: 1;
 }
 
 .footer-title {
@@ -184,4 +188,58 @@ nav ul li:hover .dropdown-menu {
 
 .footer-social a:hover {
     color: var(--hover-text-color);
+}
+
+.contact-form-container {
+    flex: 1;
+    margin-left: 40px;
+    background-color: var(--light-bg-color);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.contact-form-container h2 {
+    margin-bottom: 15px;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.contact-form-container button {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form-container button:hover {
+    background-color: var(--hover-primary-color);
+}
+
+.section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
 }

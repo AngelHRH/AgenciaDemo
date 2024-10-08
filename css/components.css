@@ -145,10 +145,23 @@
     padding: 0;
 }
 
+#magazine-container {
+    display: flex;           
+    flex-direction: column;  
+    align-items: center;     
+    text-align: center;      
+    padding: 20px;        
+}
+
 #magazine {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+    justify-items: center;    
+    align-items: center;      
+    margin: 0 auto;          
+    max-width: 1200px;       
+    width: 100%;            
 }
 
 #magazine img {
