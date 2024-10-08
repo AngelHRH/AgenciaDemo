@@ -1,0 +1,184 @@
+/* Navbar Styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: var(--secondary-color);
+    height: 80px;
+}
+
+.nav-container h1 {
+    margin: 0; /* Eliminar margen */
+    font-size: 1.5em;
+}
+
+.nav-container h1 a {
+    text-decoration: none;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.nav-menu {
+    position: relative; /* Para el posicionamiento del menú */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2em;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+nav ul li a:hover {
+    color: var(--hover-text-color);
+    background-color: var(--hover-color);
+}
+
+/* Estilo para el cambio de moneda */
+.currency-change {
+    font-size: 1.1em; /* Ajustar el tamaño de la fuente */
+    background-color: var(--text-color); /* Fondo para destacar */
+    color: var(--secondary-color); /* Color de texto */
+    padding: 5px 10px;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.currency-container li{
+    list-style: none;
+}
+
+/* Estilo para el menú desplegable */
+.nav-link.dropdown-toggle::after {
+    content: '\25BC'; /* Triángulo hacia abajo */
+    font-size: 0.6em;
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--hover-color);
+}
+
+/* Mostrar el menú al hacer clic */
+.show {
+    display: grid;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: grid;
+}
+
+/* Estilos para móvil */
+.menu-toggle {
+    display: none; /* Ocultar el menú por defecto */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: var(--text-color);
+    margin: 3px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        align-items: center;
+        display: none; /* Ocultar el menú en pantallas pequeñas */
+        flex-direction: column; /* Cambiar a columna */
+        position: absolute;
+        white-space: nowrap;
+        top: 40px; /* Asegurar que el menú esté debajo de la navbar */
+        right: 0; /* Alinear al borde izquierdo */
+        width: auto; /* Asegurarse de que el menú ocupe el ancho completo */
+        border-radius: 5px;
+        background-color: var(--secondary-color);
+        padding: 10px 0; /* Espaciado vertical */
+        z-index: 2000; /* Asegurar que el menú esté por encima de otros elementos */
+    }
+
+    nav ul.show {
+        display: flex; /* Mostrar menú al hacer clic */
+    }
+
+    .menu-toggle {
+        display: flex; /* Mostrar el icono de menú en móvil */
+    }
+}
+
+/* Footer Styles */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-title {
+    margin: 0;
+    font-size: 2em;
+}
+
+.footer-contact {
+    margin: 20px 0;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacio entre iconos */
+}
+
+.footer-social a {
+    color: var(--text-color);
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--hover-text-color);
+}

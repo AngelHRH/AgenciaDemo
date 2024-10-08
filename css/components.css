@@ -1,0 +1,127 @@
+/* Estilos para el carrusel de banners */
+.container-carrusel {
+    display: flex; /* Usa flexbox para alinear elementos */
+    flex-direction: column; /* Alinea en columna */
+    align-items: center; /* Centra horizontalmente */
+}
+
+
+.carrusel {
+    position: relative;
+    max-width: 80%; /* Se adapta al ancho de la pantalla */
+    overflow: hidden;
+}
+
+/* Sección del banner */
+#banner-section {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#banner-section h2 {
+    background-color: var(--secondary-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 2em;
+}
+
+/* Contenedor de banners */
+#banner-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición suave */
+    justify-content: center; /* Centra los banners horizontalmente */
+}
+
+/* Estilos para cada banner */
+.banner {
+    min-width: 100%; /* Cada banner ocupa todo el ancho */
+    height: 300px; /* Ajusta según el tamaño que necesites */
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Estilos para las flechas del carrusel */
+.arrows {
+    position: absolute; 
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.arrows button {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.arrows button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Más oscuro al pasar el mouse */
+}
+
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .banner {
+        height: 200px; /* Ajustar el alto del banner en pantallas pequeñas */
+    }
+}
+
+/* Estilos para los elementos de banner dentro del contenedor */
+.banner-item {
+    background-color: var(--secondary-color);
+    width: 300px;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.banner-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para los viajes más vendidos y novedades */
+#most-sold,
+#recent-trips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+#most-sold li,
+#recent-trips li {
+    width: 200px;
+    border: 1px solid var(--text-color);
+    padding: 15px;
+    text-align: center;
+}
+
+#most-sold li img,
+#recent-trips li img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para la revista */
+#magazine {
+    text-align: center;
+}
+
+#magazine img {
+    width: 200px;
+    height: auto;
+}

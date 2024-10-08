@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia Muestra</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <script type="text/javascript" src="js/home.js"> </script>
+    <header>
+        <div class="nav-container">
+            <h1><a href="/">Agencia Demo</a></h1>
+            <nav class="nav-menu">
+                <ul id="nav-list">
+                    <li id="internacionales"><a href="#">Viajes Internacionales</a></li>
+                    <li id="nacionales"><a href="#">Viajes Nacionales</a></li>
+                    <li id="mas-destinos"><a href="#">Más Destinos</a></li>
+                    <li><a href="#">¿Quiénes Somos?</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+            <div id="currency-container">
+                <div id="cambio" class="currency-change"></div>
+            </div>
+        </div>        
+    </header>
+    <!-- Sección para el banner -->
+    <div class="container-carrusel">
+        <div class="carrusel">
+            <section id="banner-section">
+                <h2>Viajes</h2>
+                <div id="banner-container">
+                    <!-- Aquí se insertarán los banners dinámicamente -->
+                </div>
+                <div class="arrows">
+                    <button id="prev">&#10094;</button> <!-- Flecha izquierda -->
+                    <button id="next">&#10095;</button> <!-- Flecha derecha -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- Sección para los viajes más vendidos -->
+    <section id="most-sold-trips">
+        <h2>Viajes Más Vendidos</h2>
+        <ul id="most-sold">
+            <!-- Aquí se insertarán los viajes más vendidos -->
+        </ul>
+    </section>
+
+    <!-- Sección para las novedades -->
+    <section id="recent-trips-section">
+        <h2>Novedades</h2>
+        <ul id="recent-trips">
+            <!-- Aquí se insertarán las novedades -->
+        </ul>
+    </section>
+
+    <!-- Sección para la revista -->
+    <section id="magazine-section">
+        <h2>Nuestra Revista</h2>
+        <div id="magazine">
+            <!-- Aquí se insertará la revista -->
+        </div>
+    </section>
+    
+    <!-- Sección para el valor de cambio -->
+    <div id="cambio"></div>
+
+    <!-- Sección para el footer -->
+    <footer id="footer"></footer>
+
+    <!-- Sección de WhatsApp -->
+    <div id="whatsapp"></div>
+
+    <script src="js/info.js"></script>
+</body>
+</html>
