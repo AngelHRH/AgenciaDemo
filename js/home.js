@@ -55,10 +55,13 @@ fetch('https://www.api.salonnefertaritravel.com/api/getHome', {
         data.masvendidos.forEach(trip => {
             const li = document.createElement('li');
             li.innerHTML = `
-                <img src="${trip.imagen}" alt="${trip.nombre}">
-                <strong>${trip.nombre}</strong>
-                <div class="button-container"> <!-- Contenedor para centrar el botón -->
-                    <a href="/viaje/${trip.viaje}" class="btn-center">Ver más detalles</a>
+                <div class="trip-card">
+                    <img src="${trip.imagen}" alt="${trip.nombre}" class="trip-image">
+                    
+                    <div class="button-container">
+                        <div class="name">${trip.nombre}</div>
+                        <a href="/viaje/${trip.viaje}" class="btn-center">Ver más detalles</a>
+                    </div>
                 </div>
             `;
             mostSold.appendChild(li);
@@ -71,7 +74,7 @@ fetch('https://www.api.salonnefertaritravel.com/api/getHome', {
             const li = document.createElement('li');
             li.innerHTML = `
                 <strong>${trip.nombre}</strong>
-                <div class="button-container"> <!-- Contenedor para centrar el botón -->
+                <div class="button-container">
                     <a href="/viaje/${trip.viaje}" class="btn-center">Ver más detalles</a>
                 </div>
             `;
