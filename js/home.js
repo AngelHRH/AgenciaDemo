@@ -12,7 +12,6 @@ fetch('https://www.api.salonnefertaritravel.com/api/getHome', {
 .then(data => {
     const bannerContainer = document.getElementById('banner-container');
 
-    // Mostrar los banners
     if (data.banner && Array.isArray(data.banner)) {
         data.banner.forEach(banner => {
             const bannerDiv = document.createElement('div');
@@ -26,7 +25,6 @@ fetch('https://www.api.salonnefertaritravel.com/api/getHome', {
             bannerContainer.appendChild(bannerDiv);
         });
 
-        // Inicializar el carrusel
         let currentIndex = 0;
         const banners = document.querySelectorAll('.banner-item');
         const totalBanners = banners.length;
@@ -50,7 +48,6 @@ fetch('https://www.api.salonnefertaritravel.com/api/getHome', {
         };
     }
 
-    // Mostrar los viajes más vendidos
     const mostSold = document.getElementById('most-sold');
     if (data.masvendidos && Array.isArray(data.masvendidos)) {
         data.masvendidos.forEach(trip => {
@@ -64,7 +61,6 @@ fetch('https://www.api.salonnefertaritravel.com/api/getHome', {
         });
     }
 
-    // Mostrar las novedades
     const recentTrips = document.getElementById('recent-trips');
     if (data.novedades && Array.isArray(data.novedades)) {
         data.novedades.forEach(trip => {
@@ -77,7 +73,6 @@ fetch('https://www.api.salonnefertaritravel.com/api/getHome', {
         });
     }
 
-    // Mostrar la revista
     const magazineSection = document.getElementById('magazine');
     if (data.revista && data.portada) {
         magazineSection.innerHTML = `

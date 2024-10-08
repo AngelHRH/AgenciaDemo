@@ -92,14 +92,12 @@ function loadValorCambio() {
 }
 
 function loadMenu() {
-    // Limpia el contenido de los elementos del menú antes de añadir nuevos
     document.getElementById('internacionales').innerHTML = '';
     document.getElementById('nacionales').innerHTML = '';
     document.getElementById('mas-destinos').innerHTML = '';
 
     let html = '';
 
-    // Viajes Internacionales
     if (internacionales && internacionales.length > 0) {
         html = `
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Viajes Internacionales</a>
@@ -112,13 +110,11 @@ function loadMenu() {
         document.getElementById('internacionales').innerHTML = html;
     }
 
-    // Viajes Nacionales
     if (mostrarNacionales) {
         html = '<a href="viajes-nacionales.html" class="nav-item nav-link">Viajes Nacionales</a>';
         document.getElementById('nacionales').innerHTML = html;
     }
 
-    // Otros Destinos
     if (otrosDestinos && otrosDestinos.length > 0) {
         html = `
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Más Destinos</a>
@@ -131,12 +127,11 @@ function loadMenu() {
         document.getElementById('mas-destinos').innerHTML = html;
     }
 
-    // Resto del código para manejar eventos...
 }
 
 const mobileMenu = document.getElementById('mobile-menu');
 const navList = document.getElementById('nav-list');
 
 mobileMenu.addEventListener('click', () => {
-    navList.classList.toggle('show'); // Alternar clase para mostrar el menú
+    navList.classList.toggle('show');
 });
