@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <script type="text/javascript" src="js/home.js"> </script>
     <header>
         <div class="nav-container">
-            <h1><a href="/">Agencia Demo</a></h1>
+            <h1><a href="#">Agencia Demo</a></h1>
             <nav class="nav-menu">
                 <ul id="nav-list">
                     <li id="internacionales"><a href="#">Viajes Internacionales</a></li>
@@ -33,6 +32,7 @@
             <div id="cambio" class="currency-change"></div>
         </div>        
     </header>
+    
     <div class="container-carrusel">
         <div class="carrusel">
             <section id="banner-section">
@@ -46,6 +46,7 @@
             </section>
         </div>
     </div>
+
     <section id="most-sold-trips" class="section">
         <div class="container">
             <div class="center-container">
@@ -54,14 +55,12 @@
             </div>
         </div>
     </section>
-    
+
     <section id="recent-trips-section" class="section">
         <div class="container">
             <h2>Novedades</h2>
             <div class="center-container">
-                <ul id="recent-trips">
-                    </li>
-                </ul>
+                <ul id="recent-trips"></ul>
             </div>
         </div>
     </section>
@@ -81,13 +80,13 @@
             </div>
         </div>
     </section>
-    
-    <div id="cambio"></div>
 
     <footer id="footer"></footer>    
 
     <div id="whatsapp"></div>
 
+    <!-- Mueve los scripts al final para asegurar que el DOM esté listo -->
+    <script src="js/home.js"></script>
     <script src="js/info.js"></script>
 </body>
 </html>

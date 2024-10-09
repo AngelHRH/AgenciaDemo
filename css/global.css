@@ -11,6 +11,11 @@
       "YTLC" 500;
 }
 
-body{
-    background-color: var(--primary-color);
+body {
+    background-image: url('/agencia/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
