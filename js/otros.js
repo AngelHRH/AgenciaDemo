@@ -54,7 +54,8 @@ function displayTrips(viajes) {
             html += '</div>';
             html += '</div>';
             html += '</div>';
-            html += '<a href="tour.html?tour='+element.enlace+'" class="travel-btn">MÁS DETALLES</a>';
+            // Asegúrate de usar el campo correcto para el slug
+            html += '<a href="tour.html?tour='+element.enlace+'" class="travel-btn">MAS DETALLES</a>'; 
             html += '</div>';
             html += '</div>';
             html += '</div>';
@@ -67,5 +68,6 @@ function displayTrips(viajes) {
         document.getElementById('viajes').innerHTML = '<p>No se encontraron viajes.</p>';
     }
 }
+
 
 document.addEventListener('DOMContentLoaded', loadDestinos);

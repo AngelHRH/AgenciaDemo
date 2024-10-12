@@ -344,3 +344,105 @@
         width: 100%;
     }
 }
+
+/* Estilos para la cabecera del viaje */
+.cabecera-viaje {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.cabecera-titulo h2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Contenedor principal */
+#tour-details-container {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Estilos para el contenido del viaje */
+.contenido-viaje {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.contenido-viaje p {
+    margin-bottom: 10px;
+}
+
+.contenido-viaje .row {
+    margin: 15px 0;
+}
+
+.contenido-viaje .col-4 {
+    text-align: center;
+    padding: 10px;
+}
+
+.contenido-viaje .col-4 p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Imagen en la sección derecha */
+.contenido-viaje img {
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+/* Estilo para las etiquetas de precios */
+.contenido-viaje .col-4 b {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilo para las fechas de salida */
+.contenido-viaje div b {
+    margin-top: 20px;
+}
+
+.contenido-viaje div p {
+    padding: 5px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .cabecera-viaje {
+        height: 200px;
+    }
+
+    .cabecera-titulo h2 {
+        font-size: 20px;
+    }
+
+    .contenido-viaje .row {
+        flex-direction: column;
+    }
+
+    .contenido-viaje img {
+        width: 100%;
+    }
+
+    .contenido-viaje .col-4 {
+        min-width: 100px;
+        padding: 5px;
+    }
+}
