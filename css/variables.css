@@ -1,7 +1,13 @@
 :root {
-    --text-color: #474747;
-    --hover-text-color: #f0e8e8;
-    --text-color-white: #FFFFFF;
-    --secondary-color: #E9F1FA;
-    --hover-color: #00ABE4;
+    --text-color: #333;
+    --secondary-color: #97d6ff;
+    --highlight-color: #2990fe;
+    --hover-color: #77c9ff;
+    --hover-text-color: #fff;
+    --background-color: #f8f8f8;
+    --card-background-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-hover-color: rgba(0, 0, 0, 0.3);
+    --button-background-color: rgba(0, 0, 0, 0.5);
+    --button-hover-background-color: rgba(0, 0, 0, 0.8);
 }

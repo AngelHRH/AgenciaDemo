@@ -241,7 +241,7 @@
 }
 
 .travel-card {
-    background-color: #fff;
+    background-color: var(--card-background-color);
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -273,12 +273,12 @@
 .travel-card-title {
     font-size: 1.4rem;
     margin-bottom: 12px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .travel-card-text {
     font-size: 0.95rem;
-    color: #666;
+    color: var(--text-color);
 }
 
 .travel-card-text p {
@@ -287,11 +287,12 @@
 }
 
 .travel-text-primary {
-    color: #007bff !important;
+    color: var(--secondary-color);
 }
 
 .travel-btn {
-    background-color: #007bff;
+    text-decoration: none;
+    background-color: var(--secondary-color);
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -305,7 +306,7 @@
 }
 
 .travel-btn:hover {
-    background-color: #0056b3;
+    background-color: var(--highlight-color);
 }
 
 @keyframes travel-fadeIn {
@@ -345,7 +346,6 @@
     }
 }
 
-/* Estilos para la cabecera del viaje */
 .cabecera-viaje {
     height: 300px;
     background-size: cover;
@@ -353,7 +353,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: var(--hover-text-color);
     text-align: center;
     border-radius: 10px 10px 0 0;
 }
@@ -364,18 +364,16 @@
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Contenedor principal */
 #tour-details-container {
-    background-color: #f8f8f8;
+    background-color: var(--background-color);
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
-/* Estilos para el contenido del viaje */
 .contenido-viaje {
     padding: 20px;
-    background-color: #ffffff;
+    background-color: var(--background-color);
 }
 
 .contenido-viaje p {
@@ -396,34 +394,30 @@
     font-weight: bold;
 }
 
-/* Imagen en la sección derecha */
 .contenido-viaje img {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-top: 15px;
 }
 
-/* Estilo para las etiquetas de precios */
 .contenido-viaje .col-4 b {
     display: block;
     margin-bottom: 5px;
 }
 
-/* Estilo para las fechas de salida */
 .contenido-viaje div b {
     margin-top: 20px;
 }
 
 .contenido-viaje div p {
     padding: 5px;
-    background-color: #3498db;
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--hover-text-color);
     border-radius: 4px;
     display: inline-block;
     margin: 5px 5px 5px 0;
 }
 
-/* Responsividad */
 @media (max-width: 768px) {
     .cabecera-viaje {
         height: 200px;
